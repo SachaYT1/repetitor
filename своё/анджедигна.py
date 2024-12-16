@@ -1,0 +1,5 @@
+book_name = input()
+author_name = input()
+author_surname = input()
+print(f'Автор: {author_name[0]}. {author_surname}')
+print(f'Книга: {book_name}')

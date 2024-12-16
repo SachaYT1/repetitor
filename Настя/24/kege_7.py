@@ -1,0 +1,34 @@
+f = open('24_4627.txt').read()
+
+
+c_max = 0
+c1 = 0
+for i in range(2, len(f), 3):
+    if (f[i - 2] + f[i - 1] + f[i]) in ['NPO', 'PNO']:
+        c1 += 1
+        if c1 > c_max:
+            c_max = c1
+    else:
+        c1 = 0
+
+c1 = 0
+for i in range(3, len(f), 3):
+    if (f[i - 2] + f[i - 1] + f[i]) in ['NPO', 'PNO']:
+        c1 += 1
+        if c1 > c_max:
+            c_max = c1
+    else:
+        c1 = 0
+
+c1 = 0
+for i in range(4, len(f), 3):
+    if (f[i - 2] + f[i - 1] + f[i]) in ['NPO', 'PNO']:
+        c1 += 1
+        if c1 > c_max:
+            c_max = c1
+    else:
+        c1 = 0
+
+
+
+print(c_max)
