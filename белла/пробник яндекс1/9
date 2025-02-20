@@ -1,0 +1,20 @@
+f = open('9r.txt').readlines()
+ans = 0
+for a in f:
+    chet = 1
+    nechet = 0
+    cnt_chet = 0
+    cnt_nechet = 0
+    r = list(map(int, a.split()))
+    for num in r:
+        if num % 2 == 0:
+            chet *= num
+            cnt_chet += 1
+        if num % 2 == 1:
+            nechet += num
+            cnt_nechet += 1
+    if cnt_chet >= 2 and cnt_nechet >= 2:
+        if nechet*3 > chet:
+            ans += 1
+
+print(ans)
