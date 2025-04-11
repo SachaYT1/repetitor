@@ -18,7 +18,7 @@ for expression in a:
                 string += equation + '-'
             else:
                 if equation == '0':
-                    c = 0
+                    c = 2
                 else:
                     c = len(str(int(equation))) + 1
                 string += equation + '-'
